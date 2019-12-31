@@ -10,7 +10,7 @@ float value1 = 0;
 float value2 = 0;
 
 void setup() {
-  Serial.begin(9601);
+  Serial.begin(9600);
   
   pinMode(OUT1, OUTPUT);
   pinMode(Pin1, INPUT);
@@ -20,16 +20,17 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.print("MOISTURE LEVEL - Sensor 1 :");
   value1 = analogRead(Pin1);
-  Serial.println("Moisture: ");
-  Serial.println(value1);
   value1= map(value1,650,200,0,100);
-  Serial.print("Moisture: ");
   Serial.print(value1);
   Serial.println("%");
-  
-
-  Serial.println();
+   if (value1<50)
+   {
+    Serial.print('H');
+   }
+   else{
+  Serial.print('L');
+  }
+ 
   delay(1000);
 }
