@@ -18,12 +18,12 @@ void loop() {
     incomingByte = Serial.read();
     Serial.println(incomingByte);
 
-    // if it's a capital H (ASCII 72), turn on the LED:
+    // if it's a capital H (ASCII 72), start pump
     if (incomingByte == 'H') {
       digitalWrite(OUT1, LOW);
       Serial.println("Start pump");      
     }
-    // if it's an L (ASCII 76) turn off the LED:
+    // if it's an L (ASCII 76), stop pump
     if (incomingByte == 'L') {
       digitalWrite(OUT1, HIGH);
       Serial.println("Stop pump");      
