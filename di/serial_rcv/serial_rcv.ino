@@ -1,8 +1,5 @@
-int Pin1 = A0;
 int OUT1 = 2;
 int incomingByte;      // a variable to read incoming serial data into
-
-int Pin2 = A1;
 int OUT2 = 3;
 
 float value1 = 0;
@@ -10,9 +7,7 @@ float value2 = 0;
 
 void setup() {
   Serial.begin(9600);
-  
   pinMode(OUT1, OUTPUT);
-
   digitalWrite(OUT1, HIGH);
   delay(500);
 }

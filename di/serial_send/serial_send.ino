@@ -1,20 +1,11 @@
 int Pin1 = A0;
 int OUT1 = 2;
 
-/*
-int Pin2 = A1;
-int OUT2 = 3;
-*/
-
 float value1 = 0;
-float value2 = 0;
 
 void setup() {
   Serial.begin(9600);
-  
-  pinMode(OUT1, OUTPUT);
   pinMode(Pin1, INPUT);
-  digitalWrite(OUT1, HIGH);
   delay(500);
 }
 
@@ -31,6 +22,5 @@ void loop() {
    else{
   Serial.print('L');
   }
- 
   delay(1000);
 }
