@@ -47,18 +47,19 @@ void loop() {
           {
           digitalWrite(OUT1, HIGH);
           Serial.println("Water level fine");
-          Serial.print("Stop filling pump");
-          Serial.print("Stop draining pump");
+          Serial.println("Stop filling pump");
+          Serial.println("Stop draining pump");
           digitalWrite(OUT2, HIGH);
           }
           else
           {
             digitalWrite(OUT1, HIGH);
             Serial.println("Water level fine");
-            Serial.print("Stop filling pump");
+            Serial.println("Stop filling pump");
+            Serial.println("Start draining water");
             digitalWrite(OUT2, LOW);
           }
         }
     }
-  delay(500);
+  delay(1000);
 }
