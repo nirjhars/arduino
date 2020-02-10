@@ -12,7 +12,7 @@ const int httpsPort = 443 ;
 const int OUT1 = 2;
 
 WiFiClientSecure client; 
-String GAS_ID ="AKfycbwK5Jf2WAs3WlB43pfwbgFocYd9HAqfDTU2OQItXKM3Gyn9DeEY";
+String GAS_ID ="-------";
 
 int value; //Sensor reading
 
@@ -35,7 +35,6 @@ void setup() {
   WiFi.mode(WIFI_STA);        //Disable hotspot
   
   WiFi.begin(ssid, password);     //Connect to your WiFi router
-  Serial.println("");
   Serial.println(str_attemptcount);
   Serial.print("Connecting");
   // Wait for connection & - attempt to connect in twenty times
@@ -48,12 +47,10 @@ void setup() {
   
  if (WiFi.status() != WL_CONNECTED)
  {
-  Serial.println("");
   Serial.print("Internet connection not working");
  }
  else{
   //If connection successful show IP address in serial monitor
-  Serial.println("");
   Serial.print("Connected to " + ssid + " IP Address: " + WiFi.localIP());  //debug statement
  }
 }
