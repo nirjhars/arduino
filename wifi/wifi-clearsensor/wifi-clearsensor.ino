@@ -38,7 +38,7 @@ void setup() {
   Serial.println("");
   Serial.println(str_attemptcount);
   Serial.print("Connecting");
-  // Wait for connection & - attempt to connect in twenty times with half second interval 
+  // Wait for connection & - attempt to connect in twenty times
   while ((WiFi.status() != WL_CONNECTED) && (attemptcount < 20)) {
     delay(500);  
     str_attemptcount = String(attemptcount, DEC);
