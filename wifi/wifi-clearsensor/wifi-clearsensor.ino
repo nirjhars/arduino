@@ -71,11 +71,12 @@ void loop() {
   delay(10000);
 }
 
-//Debug - test connection to google doc url
+//Send data to google Doc
 void sendData(int val){
   Serial.print("Connecting to ");
   Serial.println(host);
-  if (!client.connect(host,httpsPort))
+//Debug - test connection to google doc url
+ if (!client.connect(host,httpsPort))
   {
     Serial.println("connection failed");
     return;
